@@ -25,7 +25,7 @@ public enum GRStatusBarStyle: String {
         }
         
         switch appearance.name {
-        case NSAppearanceNameVibrantDark:
+        case NSAppearance.Name.vibrantDark:
             self.init(rawValue: "dark")!
         default:
             self.init(rawValue: "light")!
@@ -35,9 +35,9 @@ public enum GRStatusBarStyle: String {
     var appearance: NSAppearance {
         switch self {
         case .light:
-            return NSAppearance(named: NSAppearanceNameVibrantLight)!
+            return NSAppearance(named: NSAppearance.Name.vibrantLight)!
         case .dark:
-            return NSAppearance(named: NSAppearanceNameVibrantDark)!
+            return NSAppearance(named: NSAppearance.Name.vibrantDark)!
         }
     }
 }

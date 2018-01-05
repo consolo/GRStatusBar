@@ -22,10 +22,10 @@ class RoundedVisualEffectView: NSVisualEffectView {
         cornerImage = NSImage(size: bounds.size)
         cornerImage.lockFocus()
         NSColor.clear.setFill()
-        NSRectFill(bounds)
+        self.bounds.fill()
         NSBezierPath(roundedRect: bounds, xRadius: cornerRadius, yRadius: cornerRadius).addClip()
         NSColor.white.setFill()
-        NSRectFill(bounds)
+        self.bounds.fill()
         cornerImage.unlockFocus()
         
         maskImage = cornerImage

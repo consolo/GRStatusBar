@@ -23,7 +23,7 @@ class GRStatusBarBackgroundView: NSView {
         
         NSBezierPath(roundedRect: bounds, xRadius: LayoutConstants.cornerRadius, yRadius: LayoutConstants.cornerRadius).addClip()
         backgroundColor.setFill()
-        NSRectFill(dirtyRect)
+        dirtyRect.fill()
     }
     
 }
